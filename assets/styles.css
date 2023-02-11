@@ -2,4 +2,4 @@ h1{
   color: blue;
 }
 
-@import "stylesheets/container.css";
+@import "./stylesheets/container.css";
