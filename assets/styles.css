@@ -1,9 +1,10 @@
 h1{
-  color: blue;
+  font-weight: bolder;
+  text-align: center;
 }
 
 .container {
-  width: 800px;
+  width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
-@import "./stylesheets/container.css";
