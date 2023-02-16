@@ -1,10 +1,162 @@
 h1{
-  font-weight: bolder;
   text-align: center;
 }
 
+.container h1{
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+p{
+  font-size: 20px;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+  margin-bottom: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://e1.pxfuel.com/desktop-wallpaper/369/604/desktop-wallpaper-awesome-anime-banner-cool-anime-banners.jpg);
+}
+
 .container {
-  width: 700px;
+  max-width: 700px;
+  height: 700px;
+  border: 1px solid black;
+  border-radius: 5px;
   margin: 0 auto;
   text-align: center;
+  overflow: scroll;
+  position: relative;
+}
+
+.hr-container{
+  max-width: 450px;
+  margin: 0 auto;
+  color: lightgray ;
+}
+
+.result-container{
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buttons-container{
+  max-width: 500px ;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button{
+  color: white;
+  font-weight: bold;
+  width: 120px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease;
+  opacity: 0.8;
+  margin: 10px;
+}
+
+.button-reset{
+  color: black;
+  border: 1px solid black;
+  position: absolute;
+  right: 5px;
+  top: 210px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.button-reset:hover{
+  color: white;
+  background-color: black;
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+.comedy{
+  background: linear-gradient(#fbfb16, #c1c40f);
+  border: 1px solid #fbfb16;
+}
+
+.adventure {
+  background: linear-gradient(#fb1638, #c40f27);
+  border: 1px solid #fb1638;
+}
+
+.romance {
+  background: linear-gradient(#fb16b2, #c40f85);
+  border: 1px solid #fb16b2;
+}
+
+.action {
+  background: linear-gradient(#fb6616, #c4700f);
+  border: 1px solid #fb6616;
+}
+
+.drama {
+  background: linear-gradient(#5b16fb, #540fc4);
+  border: 1px solid #5b16fb;
+}
+
+.mystery {
+  background: linear-gradient(#575757, #4a4a4a);
+  border: 1px solid #575757;
+}
+
+.shounen {
+  background: linear-gradient(#167dfb, #0f79c4);
+  border: 1px solid #167dfb;
+}
+
+.parody {
+  background: linear-gradient(#affb16, #51c40f);
+  border: 1px solid #affb16;
+}
+
+.slice {
+  background: linear-gradient(#16fb3c, #0fc42d);
+  border: 1px solid #16fb3c;
+}
+
+.fantasy{
+  background: linear-gradient(#16fbd5, #0fc4b5);
+  border: 1px solid #16fbd5;
+}
+
+.thriller {
+  background: linear-gradient(#a6a6a6, #b0b0b0);
+  border: 1px solid #a6a6a6;
+}
+
+.horror {
+  background: linear-gradient(#1c1c1c, #090909);
+  border: 1px solid #1c1c1c;
+}
+
+.mahou {
+  background: linear-gradient(#a71fb1, #a81fad);
+  border: 1px solid #a71fb1;
+}
+
+.mecha {
+  background: linear-gradient(#1f32b1, #1f21ad);
+  border: 1px solid #1f32b1;
 }
