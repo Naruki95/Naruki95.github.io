@@ -37,9 +37,16 @@ export default function Category() {
     });
   }
 
+  function guestUser(user) {
+    dispatched({
+      type: "GUEST",
+      user: ''
+    });
+  }
+
   const display = () => {
     if(user === null) {
-      return <AddAnilistUser addUserFunction={addUser} />
+      return <AddAnilistUser addUserFunction={addUser} guestUserFunction= {guestUser} />
     }
     else {
       return <AddCategory categories={categories} addCategoryFunction={addCategory} addTagFunction={addTag} clearFunction={clear} anilistAccount ={user} />

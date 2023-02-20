@@ -1,6 +1,8 @@
-h1{
-  text-align: center;
-}
+@import './body.css';
+@import './navbar.css';
+@import './avatar.css';
+@import './footer.css';
+
 
 .container h1{
   text-align: center;
@@ -10,11 +12,10 @@ h1{
   color: white;
 }
 
-p{
-  font-size: 20px;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  color: white;
+.hr{
+  width: 80%;
+  margin: 0 auto;
+  color: rgb(182, 215, 226);
 }
 
 .banner {
@@ -23,6 +24,13 @@ p{
   padding: 40px 0;
   margin-bottom: 20px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://e1.pxfuel.com/desktop-wallpaper/369/604/desktop-wallpaper-awesome-anime-banner-cool-anime-banners.jpg);
+}
+
+.banner p{
+  font-size: 20px;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 .container {
@@ -159,4 +167,41 @@ p{
 .mecha {
   background: linear-gradient(#1f32b1, #1f21ad);
   border: 1px solid #1f32b1;
+}
+
+.Psychological {
+  background: linear-gradient(#57046d, #370346);
+  border: 1px solid #57046d;
+}
+
+.button-choice-category{
+  transition: 0.5s;
+}
+
+.button-choice-category:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.button-add-user{
+  margin: 10px;
+  padding: 10px;
+}
+
+.button-add-user:hover {
+  cursor: pointer;
+}
+
+.input-user{
+  margin-top: 5px;
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 170px;
+  padding: 10px;
+  text-align: center;
+}
+
+.input-user:focus {
+  outline: none;
+  border-bottom: 1px solid grey;
 }

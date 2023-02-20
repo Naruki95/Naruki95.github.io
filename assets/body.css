@@ -1,0 +1,78 @@
+body{
+  color: grey;
+  background-color: #BFDCE5;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.main-content{
+  z-index: 0;
+}
+
+p{
+  font-size: 20px;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+  width: 70%;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-text{
+  align-self: center;
+}
+
+.profile h1 {
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.profile p {
+  font-size: 20px;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.my-story{
+  margin: 0 auto;
+  max-width: 70%;
+  text-align: center;
+}
+
+.skills{
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills img{
+  height: 200px;
+  width: 200px;
+  object-fit: fill;
+  margin: 20px;
+}
+
+.logos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portfolio{
+  text-align: center;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.body-container {
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}

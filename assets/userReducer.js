@@ -3,6 +3,9 @@ export default function userReducer(oldState = '', action) {
     case 'ADDED': {
       return action.user;
     }
+    case 'GUEST': {
+      return action.user
+    }
     default: {
       throw Error('Unknown action: ' + action.type);
     }

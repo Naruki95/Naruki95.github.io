@@ -9,10 +9,105 @@
 </head>
 
 <body>
-  <div >
-    <h1>My Portfolio!</h1>
+  <div class="body-container">
+    <nav class="navbar">
+      <a href="#my-story">My Story</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+    </nav>
+
+    <div class="main-content">
+      <div class="profile" >
+          <div class="profile-text">
+            <h1>Hi There! I'm <strong>Julien Nguyen</strong></h1>
+            <p>Junior fullstack developper! Looking for a job!</p>
+            <p>Here are my <strong>projects</strong></p>
+          </div>
+          <img class='avatar' src="./Portraits_LeWagon_221101_by_BenoitBillard-119BW_WEB.jpg" alt="profile">
+      </div>
+
+      <div id="my-story" class="hr">
+        <hr>
+      </div>
+
+      <div class="my-story">
+        <h2>My Story</h2>
+
+        <p>
+          I worked as quality engineer for 4 years at Horiba. As long as I am learning new stuffs I enjoyedmy life. At the end, I was able to know everything about my job and I am getting bored at this moment..
+          And the pandemic arrived, I felt like my life became more redundant and emptier. I remembered I enjoyed having computing lessons at School, and I really like solving problems and do things very interesting!
+        </p>
+
+        <p>
+          I left my job to start a new life to become a fullstack web developper with "Le Wagon". I learned how to code entirely a website by using Ruby on Rails for the back-end, Stimulus for the front-end.
+        </p>
+
+        <p>
+          Now I'm learning some new techs to be more versatile as React, Redux/React and I am hoping getting a job soon!
+        </p>
+
+        <p>
+          My dream would be to become a software engineer! I will do my best to reach my goal!
+        </p>
+      </div>
+
+      <div id="skills" class="hr">
+        <hr>
+      </div>
+
+      <div class="skills">
+        <h2>Skills</h2>
+        <div class="logos">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Ruby_on_Rails-logo.png" alt="rails">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="ruby">
+          <img src="https://www.tekoway.com/wp-content/uploads/2017/05/react-logo.png" alt="react">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="javascript">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="nodeJS">
+          <img src="https://wiki.postgresql.org/images/9/9a/PostgreSQL_logo.3colors.540x557.png" alt="postgresql">
+          <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="mySQL">
+          <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="docker">
+          <img src="https://brand.heroku.com/static/media/heroku-logotype-vertical.f7e1193f.svg" alt="heroku">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github">
+
+        </div>
+      </div>
+
+      <div id="portfolio" class="hr">
+        <hr>
+      </div>
+
+      <div class="portfolio">
+        <h2>Porfolio</h2>
+        <p>
+          This project is based on my other project on RoR(below this project). I tried to learn React so I did this
+          project for practicing React components! This app is when you are looking an new Anime, it can find you a new anime based on
+          your choice and show up only animes you didn't watch if you have an Anilist Account!
+        </p>
+        <p>
+          I am using React, and fetching on Anilist API!
+        </p>
+        <div id='root'></div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+      </div>
+    </div>
+
   </div>
-  <div id='root'></div>
 </body>
 
 </html>

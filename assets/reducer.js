@@ -1,10 +1,17 @@
-import { ADD_CATEGORY } from "./actions";
-
-const _defaultState = []
-
 export default function reducer(oldState, action) {
+
+  function search(categories, oldState) {
+    var search=[];
+    categories.map((category) => {
+      if (!(oldState.includes(category))) {
+        search.push(category)
+      }
+    })
+    return search
+  }
+
   var result
-  if((oldState.newCategory.length + oldState.newTag.length) > 2){
+  if((oldState.newCategory.length + oldState.newTag.length) >= 2){
     result = true
   }
   else {
@@ -15,7 +22,7 @@ export default function reducer(oldState, action) {
       switch (action.category){
         case "Comedy":
           return {
-            categories: ["Romance", "Slice of Life", "Fantasy"],
+            categories: search(["Romance", "Slice of Life", "Fantasy"], oldState.newCategory),
             newCategory: [...oldState.newCategory, action.category],
             tags: [],
             newTag: oldState.newTag,
@@ -23,7 +30,7 @@ export default function reducer(oldState, action) {
           }
         case "Adventure":
           return {
-            categories: ["Action", "Fantasy", "Horror", "mahou shoujo", "Mecha", "Mystery"],
+            categories: search(["Action", "Fantasy", "Horror", "mahou shoujo", "Mecha", "Mystery"], oldState.newCategory),
             newCategory: [...oldState.newCategory, action.category],
             tags: [],
             newTag: oldState.newTag,
@@ -31,7 +38,7 @@ export default function reducer(oldState, action) {
           }
         case "Romance":
           return {
-            categories: ["Slice of Life", "Comedy", "Drama", "Adventure"],
+            categories: search(["Slice of Life", "Comedy", "Drama", "Adventure"], oldState.newCategory),
             newCategory: [...oldState.newCategory, action.category],
             tags: [],
             newTag: oldState.newTag,
@@ -39,7 +46,7 @@ export default function reducer(oldState, action) {
           }
         case "Action":
           return {
-            categories: ["Adventure", "Comedy", "Fantasy"],
+            categories: search(["Adventure", "Comedy", "Fantasy"], oldState.newCategory),
             newCategory: [...oldState.newCategory, action.category],
             tags: [],
             newTag: oldState.newTag,
@@ -47,7 +54,7 @@ export default function reducer(oldState, action) {
           }
         case "Drama":
           return {
-            categories: ["Action", "Comedy", "Horror", "Psychological"],
+            categories: search(["Action", "Comedy", "Horror", "Psychological"], oldState.newCategory),
             newCategory: [...oldState.newCategory, action.category],
             tags: [],
             newTag: oldState.newTag,
@@ -55,7 +62,7 @@ export default function reducer(oldState, action) {
           }
         case "Mystery":
           return {
-            categories: ["Thriller", "Adventure"],
+            categories: search(["Thriller", "Adventure"], oldState.newCategory),
             newCategory: [...oldState.newCategory, action.category],
             tags: [],
             newTag: oldState.newTag,

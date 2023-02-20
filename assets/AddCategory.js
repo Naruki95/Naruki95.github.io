@@ -12,7 +12,9 @@ export default function AddCategory({ categories, addCategoryFunction, addTagFun
   console.log(getAccountFetch)
 
   useEffect(() => {
-    anilistAccountInformation(anilistAccount)
+    if (anilistAccount.length > 1){
+      anilistAccountInformation(anilistAccount)
+    }
   }, [])
 
   //console.log(getAccountFetch)
@@ -67,6 +69,9 @@ export default function AddCategory({ categories, addCategoryFunction, addTagFun
       return(
         <>
           {result()}
+          <h2>
+            Results:
+          </h2>
           <div>
             {getFetch.map((imageUrl, idx) => (
               <a key={idx} href= {imageUrl.id} >
@@ -87,13 +92,13 @@ export default function AddCategory({ categories, addCategoryFunction, addTagFun
           {result()}
           <div className='buttons-container'>
             {categories.categories.map((category, idx) => (
-              <div key={idx} className = {`button ${category.toLowerCase()}`} onClick={() => addCategoryFunction(category)} >
+              <div key={idx} className={`button button-choice-category ${category.toLowerCase()}`} onClick={() => addCategoryFunction(category)} >
                 {category}
               </div>
             ))}
 
             {categories.tags.map((tag, idx) => (
-              <div key={idx} className = {`button ${tag.toLowerCase() }`} onClick={() => addTagFunction(tag)} >
+              <div key={idx} className={`button button-choice-category ${tag.toLowerCase() }`} onClick={() => addTagFunction(tag)} >
                 {tag}
               </div>
             ))}
@@ -210,18 +215,18 @@ export default function AddCategory({ categories, addCategoryFunction, addTagFun
             categoryIds.forEach((id) => {
               if ((!getAccountFetch[id]['mediaIds'].includes(anime['id'])) && (!idResult.includes(i))) {
                 idResult.push(i)
-                if(resultats.length < 3) {
+                //if(resultats.length < 3) {
                   resultats.push({ url: anime['coverImage']['large'], title: anime['title']['romaji'], id: `https://anilist.co/anime/${anime['id']}` })
-                }
+                //}
               }
             })
             i++
           }
           else {
             console.log(anime)
-            if (resultats.length < 3) {
+            //if (resultats.length < 3) {
               resultats.push({ url: anime['coverImage']['large'], title: anime['title']['romaji'], id: `https://anilist.co/anime/${anime['id']}` })
-            }
+            //}
           }
         })
         console.log(getFetch)
