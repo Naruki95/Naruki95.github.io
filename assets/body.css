@@ -27,6 +27,15 @@ p{
   align-self: center;
 }
 
+.profile-text a{
+  color: grey;
+  transition: 0.5s;
+}
+
+.profile-text a:hover {
+  color: black;
+}
+
 .profile h1 {
   margin: 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);

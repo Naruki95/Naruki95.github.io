@@ -69,6 +69,9 @@ export default function AddCategory({ categories, addCategoryFunction, addTagFun
       return(
         <>
           {result()}
+          <div className='button button-reset' onClick={() => clearFunction()}>
+            Reset
+          </div>
           <h2>
             Results:
           </h2>
@@ -79,9 +82,6 @@ export default function AddCategory({ categories, addCategoryFunction, addTagFun
                 <h5>{imageUrl.title}</h5>
               </a>
             ))}
-          </div>
-          <div className='button button-reset' onClick={() => clearFunction() }>
-              Reset
           </div>
         </>
       )

@@ -90,6 +90,13 @@
   cursor: pointer;
 }
 
+@media(max-width: 600px) {
+.button-reset {
+  margin: 0 auto;
+  position: initial;
+  }
+}
+
 .button-reset:hover{
   color: white;
   background-color: black;
