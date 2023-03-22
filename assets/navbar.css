@@ -26,18 +26,3 @@
   text-decoration: none;
   color: white;
 }
-
-#page-1{
-  height: 400px;
-  background-color: green;
-}
-
-#page-2 {
-  height: 400px;
-  background-color: blue;
-}
-
-#page-3 {
-  height: 400px;
-  background-color: red;
-}

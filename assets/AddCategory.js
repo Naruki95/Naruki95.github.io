@@ -5,6 +5,51 @@ export default function AddCategory({ categories, addCategoryFunction, addTagFun
   const [getAccountFetch, setAccountFetch] = useState([])
   const [getFetch, setgetFetch] = useState([])
   const [getAnimeIds, setAnimeIds] = useState([])
+
+  const animes = ["Comedy", "Romance", "Drama", "Mystery"];
+  const [images, setImages] = useState([])
+  const [ids, setIds] = useState([])
+
+  useEffect(() => {
+    async function animeCoverImageFetching(genre) {
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Cookie", "laravel_session=3ywtTox2oRvUS1KTpXQ2kXWMIpEOIdKZtnul5sFe");
+      var graphql = JSON.stringify({
+        query: "query ($id: Int, $page: Int, $perPage: Int, $genre: String) { Page (page: $page, perPage: $perPage) { pageInfo { total currentPage lastPage hasNextPage perPage } media (id: $id, genre: $genre, sort: SCORE_DESC, type: ANIME) { id coverImage { large } } } }",
+        variables: { "page": 1, "perPage": 6, "genre": `${genre}` }
+      })
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: graphql,
+        redirect: 'follow'
+      };
+
+      await fetch("https://graphql.anilist.co/", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+          let dataParsed = JSON.parse(result)['data']['Page']['media'];
+          var i = 0;
+          while (ids.includes(dataParsed[i]['id'])) {
+            i++;
+          }
+          setIds([...ids, dataParsed[i]['id']])
+          setImages([...images, dataParsed[i]['coverImage']['large']])
+        })
+        .catch(error => console.log('error', error));
+
+    }
+    animes.forEach((genre) => {
+      animeCoverImageFetching(genre)
+    })
+    return () => {
+      console.log(images);
+    }
+  }, [categories.result])
+
+
+
   console.log(getFetch)
   //console.log(getAnimeIds)
   //console.log(categories)
