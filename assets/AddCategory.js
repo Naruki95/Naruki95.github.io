@@ -122,10 +122,12 @@ export default function AddCategory({ categories, addCategoryFunction, addTagFun
           </h2>
           <div>
             {getFetch.map((imageUrl, idx) => (
-              <a key={idx} href= {imageUrl.id} >
-                <img src={imageUrl.url}></img>
-                <h5>{imageUrl.title}</h5>
-              </a>
+              <div className = 'result'>
+                <a key={idx} href= {imageUrl.id} >
+                  <img src={imageUrl.url}></img>
+                  <h5>{imageUrl.title}</h5>
+                </a>
+              </div>
             ))}
           </div>
         </>

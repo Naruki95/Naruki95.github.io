@@ -12,6 +12,11 @@
   color: white;
 }
 
+.result img{
+  width: 300px;
+  height: 400px;
+}
+
 .hr{
   width: 80%;
   margin: 0 auto;
